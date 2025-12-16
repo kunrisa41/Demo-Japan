@@ -39,7 +39,7 @@ export const Option2: React.FC = () => {
                 <div className="flex items-start">
                     <Train className="text-blue-600 mt-1 mr-3 w-5 h-5" />
                     <div>
-                        <div className="font-bold text-blue-800 group-hover:underline flex items-center">ตั๋ว μ-SKY (Centrair->Nagoya) <ExternalLink className="w-3 h-3 ml-1"/></div>
+                        <div className="font-bold text-blue-800 group-hover:underline flex items-center">ตั๋ว μ-SKY (Centrair ➜ Nagoya) <ExternalLink className="w-3 h-3 ml-1"/></div>
                         <div className="text-sm text-gray-600">รถไฟเข้าเมืองเร็วสุด</div>
                     </div>
                 </div>
