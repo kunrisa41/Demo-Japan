@@ -6,6 +6,12 @@ import { TransportBox } from './TransportBox';
 export const Option1: React.FC = () => {
   const [showSkiPlan, setShowSkiPlan] = useState(false);
 
+  // Helper to generate "App-Friendly" Google Maps links
+  // Using maps.google.com/?q= triggers the native app more reliably on iOS than the API format
+  const getMapLink = (query: string) => {
+    return `https://maps.google.com/?q=${encodeURIComponent(query)}`;
+  };
+
   return (
     <div className="space-y-8 animate-fadeIn">
       {/* Checklist Option 1 */}
@@ -82,7 +88,7 @@ export const Option1: React.FC = () => {
             <TransportBox title="วิธีเดินทาง" type="train">
               เดินตามป้าย "Trains" ไปสถานี Meitetsu Airport Station<br/>
               <b>ตั๋ว:</b> นำ QR Code จาก Klook ไปแลกที่เคาน์เตอร์ หรือกดซื้อที่ตู้ (1,230 เยน)<br/>
-              <b>ปลายทาง:</b> ลงสถานี <a href="https://www.google.com/maps/search/?api=1&query=Meitetsu+Nagoya+Station" target="_blank" className="text-blue-600 underline hover:text-blue-800">Meitetsu Nagoya</a>
+              <b>ปลายทาง:</b> ลงสถานี <a href={getMapLink("Meitetsu Nagoya Station")} target="_blank" className="text-blue-600 underline hover:text-blue-800">Meitetsu Nagoya</a>
             </TransportBox>
           </TimelineItem>
 
@@ -93,8 +99,8 @@ export const Option1: React.FC = () => {
             icon={<Castle />}
           >
             <ul className="list-disc list-inside text-sm text-gray-700 mt-2 space-y-1">
-                <li>เที่ยวชม <a href="https://www.google.com/maps/search/?api=1&query=Nagoya+Castle" target="_blank" className="text-red-600 font-medium hover:underline">📍 Nagoya Castle</a> และพระราชวัง Honmaru Goten</li>
-                <li>ทานมื้อเที่ยงที่ 🍣 <b><a href="https://www.google.com/maps/search/?api=1&query=Yanagibashi+Central+Market" target="_blank" className="text-red-600 font-medium hover:underline">📍 ตลาดปลา Yanagibashi</a></b> (มีร้านซูชิสดๆ เยอะมาก)</li>
+                <li>เที่ยวชม <a href={getMapLink("Nagoya Castle")} target="_blank" className="text-red-600 font-medium hover:underline">📍 Nagoya Castle</a> และพระราชวัง Honmaru Goten</li>
+                <li>ทานมื้อเที่ยงที่ 🍣 <b><a href={getMapLink("Yanagibashi Central Market")} target="_blank" className="text-red-600 font-medium hover:underline">📍 ตลาดปลา Yanagibashi</a></b> (มีร้านซูชิสดๆ เยอะมาก)</li>
             </ul>
           </TimelineItem>
 
@@ -106,9 +112,9 @@ export const Option1: React.FC = () => {
           >
             <p className="text-gray-600 text-sm mt-2">ย่านการค้าที่มีของกิน Street Food เยอะมาก บรรยากาศคึกคักคล้าย Gion/Asakusa</p>
             <ul className="list-disc list-inside text-sm text-gray-700 mt-1">
-                <li>ไหว้พระวัด <a href="https://www.google.com/maps/search/?api=1&query=Osu+Kannon" target="_blank" className="text-red-600 font-medium hover:underline">📍 Osu Kannon</a></li>
-                <li>เดินช้อปปิ้งที่ <a href="https://www.google.com/maps/search/?api=1&query=Osu+Shopping+Street" target="_blank" className="text-red-600 font-medium hover:underline">📍 Osu Shopping Street</a></li>
-                <li>แวะถ่ายรูป <a href="https://www.google.com/maps/search/?api=1&query=Oasis+21" target="_blank" className="text-red-600 font-medium hover:underline">📍 Oasis 21</a> (ยานอวกาศน้ำ) ช่วงค่ำ</li>
+                <li>ไหว้พระวัด <a href={getMapLink("Osu Kannon")} target="_blank" className="text-red-600 font-medium hover:underline">📍 Osu Kannon</a></li>
+                <li>เดินช้อปปิ้งที่ <a href={getMapLink("Osu Shopping Street")} target="_blank" className="text-red-600 font-medium hover:underline">📍 Osu Shopping Street</a></li>
+                <li>แวะถ่ายรูป <a href={getMapLink("Oasis 21")} target="_blank" className="text-red-600 font-medium hover:underline">📍 Oasis 21</a> (ยานอวกาศน้ำ) ช่วงค่ำ</li>
             </ul>
           </TimelineItem>
         </div>
@@ -124,7 +130,7 @@ export const Option1: React.FC = () => {
         <div className="relative border-l-2 border-gray-300 ml-4 md:ml-6 pl-6 space-y-6 pb-2">
             <TimelineItem time="08:30 - 11:00" title="Move to Takayama" colorClass="border-blue-400">
                 <TransportBox type="train">
-                    <b>ขึ้นรถที่:</b> สถานี <a href="https://www.google.com/maps/search/?api=1&query=Nagoya+Station" target="_blank" className="text-blue-600 underline">📍 JR Nagoya</a><br/>
+                    <b>ขึ้นรถที่:</b> สถานี <a href={getMapLink("Nagoya Station")} target="_blank" className="text-blue-600 underline">📍 JR Nagoya</a><br/>
                     <b>ตั๋ว:</b> ใช้ <b>Takayama-Hokuriku Pass</b> (ฟรี) จองที่นั่งก่อนขึ้น<br/>
                     <b>รถไฟ:</b> ขบวน <b>Hida Limited Express</b> (วิวสวยมาก!)
                 </TransportBox>
@@ -147,11 +153,11 @@ export const Option1: React.FC = () => {
                             </div>
                             <div className="flex">
                                 <span className="w-16 font-bold text-gray-500 text-sm">12:30</span>
-                                <div className="flex-1 ml-2 text-sm text-gray-700">🚌 ขึ้น <b>Ski Shuttle Bus</b> ที่ <a href="https://www.google.com/maps/search/?api=1&query=Takayama+Nohi+Bus+Center" target="_blank" className="text-blue-600 underline">📍 Nohi Bus Center</a></div>
+                                <div className="flex-1 ml-2 text-sm text-gray-700">🚌 ขึ้น <b>Ski Shuttle Bus</b> ที่ <a href={getMapLink("Takayama Nohi Bus Center")} target="_blank" className="text-blue-600 underline">📍 Nohi Bus Center</a></div>
                             </div>
                             <div className="flex">
                                 <span className="w-16 font-bold text-gray-500 text-sm">13:00</span>
-                                <div className="flex-1 ml-2 text-sm text-gray-700">🎿 <b>Ski Time!</b> เล่นสกี/หิมะ ที่ <a href="https://www.google.com/maps/search/?api=1&query=Mont+Deus+Hida+Kuraiyama+Snow+Park" target="_blank" className="text-blue-600 underline">📍 Mont Deus</a></div>
+                                <div className="flex-1 ml-2 text-sm text-gray-700">🎿 <b>Ski Time!</b> เล่นสกี/หิมะ ที่ <a href={getMapLink("Mont Deus Hida Kuraiyama Snow Park")} target="_blank" className="text-blue-600 underline">📍 Mont Deus</a></div>
                             </div>
                             <div className="flex">
                                 <span className="w-16 font-bold text-gray-500 text-sm">16:30</span>
@@ -163,7 +169,7 @@ export const Option1: React.FC = () => {
             </div>
 
             <TimelineItem time="18:30" title="Dinner: Hida Beef" colorClass="border-red-600" icon={<Utensils />}>
-                <p className="text-sm text-gray-600">มื้อเย็นต้องจัด! เนื้อฮิดะย่างเตาถ่านที่ร้านดัง <a href="https://www.google.com/maps/search/?api=1&query=Ajikura+Tengoku" target="_blank" className="text-red-600 font-bold underline">📍 Ajikura Tengoku</a> หรือ <a href="https://www.google.com/maps/search/?api=1&query=Maruaki+Hida+Takayama" target="_blank" className="text-red-600 font-bold underline">📍 Maruaki</a></p>
+                <p className="text-sm text-gray-600">มื้อเย็นต้องจัด! เนื้อฮิดะย่างเตาถ่านที่ร้านดัง <a href={getMapLink("Ajikura Tengoku")} target="_blank" className="text-red-600 font-bold underline">📍 Ajikura Tengoku</a> หรือ <a href={getMapLink("Maruaki Hida Takayama")} target="_blank" className="text-red-600 font-bold underline">📍 Maruaki</a></p>
             </TimelineItem>
         </div>
       </div>
@@ -179,9 +185,9 @@ export const Option1: React.FC = () => {
             <TimelineItem time="08:45 - 11:00" title="Takayama Old Town" colorClass="border-pink-400">
                 <p className="text-sm text-gray-700 mb-2">เดินเล่นย่านเมืองเก่า <span className="text-pink-600 font-bold">📍 Sanmachi Suji</span></p>
                 <ul className="list-disc list-inside text-sm text-gray-600">
-                    <li>เดินตลาดเช้า <a href="https://www.google.com/maps/search/?api=1&query=Miyagawa+Morning+Market" target="_blank" className="underline">📍 Miyagawa Morning Market</a></li>
+                    <li>เดินตลาดเช้า <a href={getMapLink("Miyagawa Morning Market")} target="_blank" className="underline">📍 Miyagawa Morning Market</a></li>
                     <li>กินซูชิเนื้อฮิดะบนแครกเกอร์</li>
-                    <li>แวะ <a href="https://www.google.com/maps/search/?api=1&query=Takayama+Jinya" target="_blank" className="underline">📍 Takayama Jinya</a></li>
+                    <li>แวะ <a href={getMapLink("Takayama Jinya")} target="_blank" className="underline">📍 Takayama Jinya</a></li>
                 </ul>
             </TimelineItem>
 
@@ -196,7 +202,7 @@ export const Option1: React.FC = () => {
             </TimelineItem>
 
             <TimelineItem time="18:00" title="แนะนำ: Shinsekai (Osaka)" colorClass="border-yellow-500">
-                 <p className="text-sm text-gray-600">เดินย่าน <a href="https://www.google.com/maps/search/?api=1&query=Shinsekai+Osaka" target="_blank" className="text-yellow-700 font-bold underline">📍 Shinsekai</a> กินของทอด Kushikatsu ดูหอคอย Tsutenkaku</p>
+                 <p className="text-sm text-gray-600">เดินย่าน <a href={getMapLink("Shinsekai Osaka")} target="_blank" className="text-yellow-700 font-bold underline">📍 Shinsekai</a> กินของทอด Kushikatsu ดูหอคอย Tsutenkaku</p>
             </TimelineItem>
         </div>
       </div>
@@ -220,7 +226,7 @@ export const Option1: React.FC = () => {
                 <ul className="list-disc list-inside text-sm text-gray-700 mt-2 space-y-1">
                     <li>ถ่ายรูป <span className="font-bold">📍 Kobe Port Tower</span> และ <span className="font-bold">📍 Meriken Park</span></li>
                     <li>เดินเล่นย่านฝรั่ง <span className="font-bold">📍 Kitano Ijinkan</span></li>
-                    <li><b>Lunch:</b> เนื้อโกเบ <a href="https://www.google.com/maps/search/?api=1&query=Steakland+Kobe" target="_blank" className="text-blue-600 font-bold underline">(Steakland)</a> หรือ ราเมง <a href="https://www.google.com/maps/search/?api=1&query=Honke+Daiichi+Asahi+Sannomiya" target="_blank" className="text-blue-600 font-bold underline">(Daiichi Asahi)</a></li>
+                    <li><b>Lunch:</b> เนื้อโกเบ <a href={getMapLink("Steakland Kobe")} target="_blank" className="text-blue-600 font-bold underline">(Steakland)</a> หรือ ราเมง <a href={getMapLink("Honke Daiichi Asahi Sannomiya")} target="_blank" className="text-blue-600 font-bold underline">(Daiichi Asahi)</a></li>
                 </ul>
             </TimelineItem>
 
@@ -234,9 +240,9 @@ export const Option1: React.FC = () => {
             </div>
 
             <TimelineItem time="14:00 - 17:00" title="Uji Matcha Town" colorClass="border-green-600">
-                <p className="text-sm text-gray-700 mt-2">เดินถนนชาเขียว <a href="https://www.google.com/maps/search/?api=1&query=Byodoin+Omotesando" target="_blank" className="text-green-700 underline">📍 Omotesando</a> เข้าวัด <a href="https://www.google.com/maps/search/?api=1&query=Byodoin+Temple" target="_blank" className="text-green-700 underline">📍 Byodoin</a></p>
+                <p className="text-sm text-gray-700 mt-2">เดินถนนชาเขียว <a href={getMapLink("Byodoin Omotesando")} target="_blank" className="text-green-700 underline">📍 Omotesando</a> เข้าวัด <a href={getMapLink("Byodoin Temple")} target="_blank" className="text-green-700 underline">📍 Byodoin</a></p>
                 <div className="bg-green-50 p-3 rounded border border-green-200 mt-2 text-sm text-gray-700">
-                    🍵 <b>ร้านแนะนำ:</b> <a href="https://www.google.com/maps/search/?api=1&query=Nakamura+Tokichi+Main+Store" target="_blank" className="underline font-bold text-green-800">Nakamura Tokichi</a>, <a href="https://www.google.com/maps/search/?api=1&query=Masuda+Chaho" target="_blank" className="underline font-bold text-green-800">Masuda Chaho</a> (ซอฟท์ครีมชาเขียว), <a href="https://www.google.com/maps/search/?api=1&query=Starbucks+Coffee+Kyoto+Uji+Byodoin+Omotesando" target="_blank" className="underline font-bold text-green-800">Starbucks Uji</a>
+                    🍵 <b>ร้านแนะนำ:</b> <a href={getMapLink("Nakamura Tokichi Main Store")} target="_blank" className="underline font-bold text-green-800">Nakamura Tokichi</a>, <a href={getMapLink("Masuda Chaho")} target="_blank" className="underline font-bold text-green-800">Masuda Chaho</a> (ซอฟท์ครีมชาเขียว), <a href={getMapLink("Starbucks Coffee Kyoto Uji Byodoin Omotesando")} target="_blank" className="underline font-bold text-green-800">Starbucks Uji</a>
                 </div>
             </TimelineItem>
         </div>
@@ -252,8 +258,8 @@ export const Option1: React.FC = () => {
         <div className="relative border-l-2 border-gray-300 ml-4 md:ml-6 pl-6 space-y-6 pb-2">
             <TimelineItem time="เช้า" title="Kuromon Market & Shopping" colorClass="border-gray-500">
                 <ul className="list-disc list-inside text-sm text-gray-600 mt-2 space-y-1">
-                    <li>หาของกินที่ <a href="https://www.google.com/maps/search/?api=1&query=Kuromon+Ichiba+Market" target="_blank" className="font-medium underline">📍 Kuromon Market</a></li>
-                    <li>ช้อปปิ้ง <a href="https://www.google.com/maps/search/?api=1&query=Dotonbori" target="_blank" className="font-medium underline">📍 Dotonbori</a></li>
+                    <li>หาของกินที่ <a href={getMapLink("Kuromon Ichiba Market")} target="_blank" className="font-medium underline">📍 Kuromon Market</a></li>
+                    <li>ช้อปปิ้ง <a href={getMapLink("Dotonbori")} target="_blank" className="font-medium underline">📍 Dotonbori</a></li>
                 </ul>
                 <div className="mt-4">
                      <TransportBox type="info" title="ไปสนามบิน KIX">
