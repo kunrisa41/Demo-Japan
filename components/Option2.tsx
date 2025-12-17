@@ -82,8 +82,8 @@ export const Option2: React.FC = () => {
             <TimelineItem time="เย็น" title="Dinner: Hida Beef 🥩" colorClass="border-red-600" icon={<Utensils/>}>
                 <p className="text-sm text-gray-600 mt-2">เช็คอินแล้วไปจัดเนื้อฮิดะย่าง:</p>
                 <ul className="list-disc list-inside text-sm text-gray-600 ml-2 mt-1">
-                    <li><a href="https://maps.google.com/?q=Maruaki+Hida+Takayama" target="_blank" className="text-red-600 font-medium underline">Maruaki</a> (ยอดฮิต เมนูหลากหลาย)</li>
-                    <li><a href="https://maps.google.com/?q=Ajikura+Tengoku" target="_blank" className="text-red-600 font-medium underline">Ajikura Tengoku</a> (ใกล้สถานี)</li>
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Maruaki+Hida+Takayama" target="_blank" className="text-red-600 font-medium underline">Maruaki</a> (ยอดฮิต เมนูหลากหลาย)</li>
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Ajikura+Tengoku" target="_blank" className="text-red-600 font-medium underline">Ajikura Tengoku</a> (ใกล้สถานี)</li>
                 </ul>
             </TimelineItem>
         </div>
@@ -99,8 +99,8 @@ export const Option2: React.FC = () => {
         <div className="relative border-l-2 border-gray-300 ml-4 md:ml-6 pl-6 space-y-6 pb-2">
             <TimelineItem time="เช้า" title="Morning Market & Old Town" colorClass="border-orange-500">
                 <ul className="list-disc list-inside text-sm text-gray-600 mt-2 space-y-1">
-                    <li><a href="https://maps.google.com/?q=Miyagawa+Morning+Market" target="_blank" className="font-medium underline">📍 Miyagawa Morning Market</a></li>
-                    <li><a href="https://maps.google.com/?q=Sanmachi+Suji" target="_blank" className="font-medium underline">📍 Sanmachi Suji</a></li>
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Miyagawa+Morning+Market" target="_blank" className="font-medium underline">📍 Miyagawa Morning Market</a></li>
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Sanmachi+Suji" target="_blank" className="font-medium underline">📍 Sanmachi Suji</a></li>
                 </ul>
             </TimelineItem>
 
@@ -112,8 +112,8 @@ export const Option2: React.FC = () => {
 
              <TimelineItem time="เย็น" title="Nagoya Night" colorClass="border-purple-500">
                  <ul className="list-disc list-inside text-sm text-gray-600 mt-2 space-y-1">
-                     <li><a href="https://maps.google.com/?q=Osu+Shopping+Street" target="_blank" className="font-medium underline">📍 Osu Shopping Street</a></li>
-                     <li><a href="https://maps.google.com/?q=Oasis+21" target="_blank" className="font-medium underline">📍 Oasis 21</a></li>
+                     <li><a href="https://www.google.com/maps/search/?api=1&query=Osu+Shopping+Street" target="_blank" className="font-medium underline">📍 Osu Shopping Street</a></li>
+                     <li><a href="https://www.google.com/maps/search/?api=1&query=Oasis+21" target="_blank" className="font-medium underline">📍 Oasis 21</a></li>
                      <li><b>Dinner:</b> Miso Katsu หรือ Unagi</li>
                  </ul>
             </TimelineItem>
@@ -129,7 +129,7 @@ export const Option2: React.FC = () => {
 
         <div className="relative border-l-2 border-gray-300 ml-4 md:ml-6 pl-6 space-y-6 pb-2">
             <TimelineItem time="08:00" title="Yanagibashi Central Market" colorClass="border-cyan-500">
-                <p className="text-sm text-gray-600">ทานมื้อเช้า ซูชิสด/ซีฟู้ด ที่ <a href="https://maps.google.com/?q=Yanagibashi+Central+Market" target="_blank" className="text-cyan-600 font-bold underline">📍 ตลาดปลา Yanagibashi</a></p>
+                <p className="text-sm text-gray-600">ทานมื้อเช้า ซูชิสด/ซีฟู้ด ที่ <a href="https://www.google.com/maps/search/?api=1&query=Yanagibashi+Central+Market" target="_blank" className="text-cyan-600 font-bold underline">📍 ตลาดปลา Yanagibashi</a></p>
             </TimelineItem>
 
             <TimelineItem time="10:00 - 11:40" title="Move to Tokyo (Shinkansen)" colorClass="border-blue-600" icon={<Train/>}>
@@ -143,8 +143,8 @@ export const Option2: React.FC = () => {
              <TimelineItem time="บ่าย/เย็น" title="Tokyo Shopping" colorClass="border-purple-500" icon={<ShoppingBag/>}>
                 <p className="text-sm text-gray-600 mt-2">เช็คอิน (Ueno/Asakusa/Shinjuku) แล้วลุย:</p>
                 <ul className="list-disc list-inside text-sm text-gray-600 ml-2">
-                    <li>🛒 <a href="https://maps.google.com/?q=Don+Quijote" target="_blank" className="font-medium underline">Donki</a></li>
-                    <li>👟 <a href="https://maps.google.com/?q=ABC-MART" target="_blank" className="font-medium underline">ABC Mart</a></li>
+                    <li>🛒 <a href="https://www.google.com/maps/search/?api=1&query=Don+Quijote+Tokyo" target="_blank" className="font-medium underline">Donki</a></li>
+                    <li>👟 <a href="https://www.google.com/maps/search/?api=1&query=ABC-MART+Tokyo" target="_blank" className="font-medium underline">ABC Mart</a></li>
                 </ul>
             </TimelineItem>
         </div>
@@ -164,16 +164,16 @@ export const Option2: React.FC = () => {
                     <b>💰 ราคา:</b> ~500-700 เยน (ใช้ Tokyo Subway ไม่ได้)
                 </TransportBox>
                 <ul className="list-disc list-inside text-sm text-gray-600 mt-2 space-y-1">
-                    <li><a href="https://maps.google.com/?q=Kurazukuri+Street" target="_blank" className="font-medium underline">📍 Kurazukuri Street</a></li>
-                    <li><a href="https://maps.google.com/?q=Kashiya+Yokocho" target="_blank" className="font-medium underline">📍 Kashiya Yokocho</a></li>
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Kurazukuri+Street" target="_blank" className="font-medium underline">📍 Kurazukuri Street</a></li>
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Kashiya+Yokocho" target="_blank" className="font-medium underline">📍 Kashiya Yokocho</a></li>
                 </ul>
             </TimelineItem>
 
              <TimelineItem time="ค่ำ" title="Tokyo Beef Dinner 🥩" colorClass="border-red-700">
                  <ul className="list-disc list-inside text-sm text-gray-700 mt-1">
-                    <li><b>ประหยัด:</b> <a href="https://maps.google.com/?q=Gyukatsu+Motomura" target="_blank" className="text-orange-600 font-bold underline">Gyukatsu Motomura</a></li>
-                    <li><b>ปานกลาง:</b> <a href="https://maps.google.com/?q=Yakiniku+Like" target="_blank" className="text-blue-600 font-bold underline">Yakiniku Like</a></li>
-                    <li><b>หรู:</b> <a href="https://maps.google.com/?q=Jojoen" target="_blank" className="text-purple-600 font-bold underline">Jojoen</a></li>
+                    <li><b>ประหยัด:</b> <a href="https://www.google.com/maps/search/?api=1&query=Gyukatsu+Motomura" target="_blank" className="text-orange-600 font-bold underline">Gyukatsu Motomura</a></li>
+                    <li><b>ปานกลาง:</b> <a href="https://www.google.com/maps/search/?api=1&query=Yakiniku+Like" target="_blank" className="text-blue-600 font-bold underline">Yakiniku Like</a></li>
+                    <li><b>หรู:</b> <a href="https://www.google.com/maps/search/?api=1&query=Jojoen" target="_blank" className="text-purple-600 font-bold underline">Jojoen</a></li>
                 </ul>
             </TimelineItem>
         </div>
@@ -190,10 +190,10 @@ export const Option2: React.FC = () => {
             <TimelineItem time="เช้า/บ่าย" title="Tokyo Food & Shopping" colorClass="border-green-400">
                 <div className="mt-3 space-y-4 text-sm text-gray-700">
                     <div>
-                        <span className="font-bold text-blue-800">🐟 ตลาดปลา Tsukiji:</span> <a href="https://maps.google.com/?q=Tsukiji+Outer+Market" target="_blank" className="underline">Outer Market</a>
+                        <span className="font-bold text-blue-800">🐟 ตลาดปลา Tsukiji:</span> <a href="https://www.google.com/maps/search/?api=1&query=Tsukiji+Outer+Market" target="_blank" className="underline">Outer Market</a>
                     </div>
                     <div>
-                        <span className="font-bold text-red-800">🥩 เนื้อเทพราคาประหยัด:</span> Jiromaru Shinjuku, Roast Beef Ono
+                        <span className="font-bold text-red-800">🥩 เนื้อเทพราคาประหยัด:</span> <a href="https://www.google.com/maps/search/?api=1&query=Jiromaru+Shinjuku" target="_blank" className="underline font-medium text-red-700">Jiromaru Shinjuku</a>, <a href="https://www.google.com/maps/search/?api=1&query=Roast+Beef+Ono" target="_blank" className="underline font-medium text-red-700">Roast Beef Ono</a>
                     </div>
                 </div>
             </TimelineItem>
